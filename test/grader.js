@@ -58,7 +58,7 @@ var buildfn = function(url, checksfile) {
 
             if (result instanceof Error) {
               console.error('Error: ' + msg);
-              console.log("%s does not exist. Exiting.", url);
+              console.log("Error retreiving %s. Exiting.", url);
             } else {
               console.log('received non-error response from %s', url);
               //console.log(result);
