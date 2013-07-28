@@ -23,7 +23,7 @@
     <style type="text/css">
       /* Large Desktop */
       @media (min-width: 980px) {
-        body {n
+        body {
           padding-top: 60px;
         }
         .linediv-l {
@@ -52,10 +52,11 @@
 
       /* Main body and headings */
       body {
-        font-faily: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       }
       .heading, .subheading {
         font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        text-align: center;
       }
       p.lead {
         padding-top: 1.5%;
@@ -83,6 +84,26 @@
       }
       .statistics h3, .statistics p {
         color: white;
+      }
+
+      /* Marketing Copy and Footer */
+      .copy {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        text-align: justify;
+      }
+      .asset {
+        padding: 2.5% 0%;
+      }
+      .footer {
+        color: #cccccc;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #ccccff;
       }
     </style>
   </head>
@@ -189,40 +210,76 @@
 
       </div> <!-- row-fluid pitch -->
 
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.moilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
+ 
       <div class="row-fluid section1">
-        <div class="span12">
-          Marketing Section 1
+        <div class="span5 offset1 asset">
+          <img class="img-polaroid" src="http://placehold.it/480x300">
         </div>
-      </div>
+        <div class="span5 copy">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel mollis lectus. Quisque interdum aliquam dolor, eu pulvinar elit molestie sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis dapibus vitae ipsum id tincidunt. Maecenas sodales pulvinar sem dictum semper. Maecenas tincidunt felis sit amet orci feugiat pharetra. Fusce diam augue, facilisis sit amet tincidunt in, tempus ut erat. Pellentesque vitae metus dictum tortor condimentum feugiat. Nam pharetra tempus nibh. Aenean sodales lorem non dictum ultricies. Integer consequat justo arcu.
+          </p>
+        </div>
+      </div> <!-- row-fluid section1 -->
+
       <div class="row-fluid section2">
-        <div class="span12">
-          Marketing Section 2
+        <div class="span5 offset1 copy copy-right">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel mollis lectus. Quisque interdum aliquam dolor, eu pulvinar elit molestie sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis dapibus vitae ipsum id tincidunt. Maecenas sodales pulvinar sem dictum semper. Maecenas tincidunt felis sit amet orci feugiat pharetra. Fusce diam augue, facilisis sit amet tincidunt in, tempus ut erat. Pellentesque vitae metus dictum tortor condimentum feugiat. Nam pharetra tempus nibh. Aenean sodales lorem non dictum ultricies. Integer consequat justo arcu.
+          </p>
         </div>
-      </div>
+        <div class="span5 asset">
+          <img class="img-polaroid" src="http://placehold.it/480x300">
+        </div>
+      </div>  <!-- row-fluid section2 -->
+
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordian -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
       <div class="row-fluid faq">
-        <div class="span12">
-          FAQ
-        </div>
-      </div>
+        <div class="span10 offset1">
+          <h3>FAQ</h3>
+          <div class="accordian" id="accordian2">
+            <div class="accordian-group">
+              <div class="accordian-heading">
+                <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapseOne">
+                  What does FAQ stand for?
+                </a>
+              </div>
+              <div id="collapseOne" class="accordian-body collapse">
+                <div class="accordian-inner">
+                  Frequently Asked Question
+                </div>
+              </div>
+            </div> <!-- accordian-group -->
+            <div class="accordian-group">
+              <div class="accordian-heading">
+                <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapseTwo">
+                  What is a Frequently Asked Question?
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordian-body collapse">
+                <div class="accordian-inner">
+                  A question which is commonly asked by users
+                </div>
+              </div>
+            </div> <!-- accordian-group -->
+          </div> <!-- class="accordian id="accordian2" -->
+        </div> <!-- span10 offset1 -->
+      </div> <!-- row-fluid faq -->
+
+      <!-- Not crucial, but we put this under a CC By-SA 3.0 licens. -->
+      <!-- http://creativecommons.org/licenses/ -->
       <div class="row-fluid footer">
         <div class="span12">
-          Footer
+          <p> This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>, without all the cruft that would otherwise by put at the bottom of the page.</p>
         </div>
       </div>
 
-<!-- TODO: remove this - it's leftover from the original wireframe, before bootstrapping -->
-      <div class="row-fluid navigation">
-        <div class="span2 logo">
-          Logo
-        </div>
-        <div class="span6 blank">
-          Blank
-        </div>
-        <div class="span4 about">
-          About
-        </div>
-      </div>
-
-    </div>
+    </div>  <!-- container -->
   </body>
 </html>
